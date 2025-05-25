@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.adddose.AddDoseFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioExam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Per Exam" />
+
+            <RadioButton
+                android:id="@+id/radioTLD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monthly TLD" />
+        </RadioGroup>
+
+        <!-- Exam Section -->
+        <LinearLayout
+            android:id="@+id/examLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:paddingTop="16dp">
+
+            <EditText
+                android:id="@+id/editTextExamDose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Exam Absorbed Dose (mSv)"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <!-- TLD Section -->
+        <LinearLayout
+            android:id="@+id/tldLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:paddingTop="16dp">
+
+            <EditText
+                android:id="@+id/editTextTldDose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="TLD Monthly Absorbed Dose (mSv)"
+                android:inputType="numberDecimal" />
+
+            <Spinner
+                android:id="@+id/spinnerTldMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Dose"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/textViewTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Yearly Dose: 0.0 mSv"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>

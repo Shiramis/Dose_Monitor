@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Dose monitor</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="add_dose">Add Dose</string>
+    <string name="year_total">Year Total</string>
+    <string name="monthly_charts">Monthly Charts</string>
+    <string name="select">Select:</string>
+</resources>
