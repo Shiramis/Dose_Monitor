@@ -48,6 +48,13 @@
             android:paddingTop="16dp">
 
             <EditText
+                android:id="@+id/editTextExamType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Exam Type (e.g. Chest X-ray)"
+                android:inputType="text" />
+
+            <EditText
                 android:id="@+id/editTextExamDose"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,17 +82,16 @@
                 android:id="@+id/spinnerTldMonth"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:spinnerMode="dropdown"
-                />
-
+                android:spinnerMode="dropdown" />
         </LinearLayout>
 
         <Button
-            android:id="@+id/buttonSave"
-            android:layout_width="match_parent"
+            android:id="@+id/buttonSaveDose"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Save Dose"
-            android:layout_marginTop="24dp" />
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal" />
 
         <TextView
             android:id="@+id/textViewTotal"

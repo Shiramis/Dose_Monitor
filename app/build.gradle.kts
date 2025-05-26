@@ -35,7 +35,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
@@ -43,9 +42,15 @@ dependencies {
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+
     // Chart library
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
+    // Room dependencies
+    implementation(libs.room.runtime)               // room-runtime (e.g. androidx.room:room-runtime:2.6.1)
+    annotationProcessor(libs.room.compiler)         // room-compiler (e.g. androidx.room:room-compiler:2.6.1)
+
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
